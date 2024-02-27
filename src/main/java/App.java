@@ -11,12 +11,19 @@ public class App {
             System.out.print("Ошибка. Нужны 2 значения и оператор");
             return;
         }
-        int num0 = Integer.parseInt(parts[0]);
+        int num0, num1;
+        try {
+            num0 = Integer.parseInt(parts[0]);
+            num1 = Integer.parseInt(parts[2]);
+        } catch (NumberFormatException e) {
+            System.out.println("Не удалось получить число");
+            return;
+        }
+
         char oper = parts[1].charAt(0);
-        int num1 = Integer.parseInt(parts[2]);
         int res = 0;
 
-        switch(oper) {
+        switch (oper) {
             case '-':
                 res = num0 - num1;
                 break;
@@ -42,3 +49,4 @@ public class App {
 
     }
 }
+
