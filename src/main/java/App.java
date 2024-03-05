@@ -8,7 +8,7 @@ public class App {
         String input = scanner.nextLine();
         String[] parts = input.split(" ");
         if (parts.length != 3) {
-            System.out.print("Ошибка. Нужны 2 значения и оператор");
+            System.out.println("Ошибка. Нужны 2 значения и оператор");
             return;
         }
         int num0, num1;
